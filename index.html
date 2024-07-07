@@ -1,0 +1,75 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Product Details Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  </head>
+  <body>
+    <nav>
+      <div class="logo">E-commerce</div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Offers</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <i class="fas fa-shopping-cart"></i>
+      </ul>
+    </nav>
+
+    <div class="flex-box">
+      <div class="left">
+        <div class="big-img">
+          <img src="images/puma.jpg">
+        </div>
+        <div class="images">
+          <div class="small-img">
+            <img src="images/puma1.jpg" onclick="showImg(this.src)">
+          </div>
+          <div class="small-img">
+            <img src="images/puma2.jpg" onclick="showImg(this.src)">
+          </div>
+          <div class="small-img">
+            <img src="images/puma.jpg" onclick="showImg(this.src)">
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="url">Home > Product > Shoe</div>
+        <div class="pname">Shoes for Men</div>
+        <div class="ratings">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <div class="price">MRP : $35</div>
+        <div class="size">
+          <p>Size :</p>
+          <div class="psize active">9 UK</div>
+          <div class="psize">10 UK</div>
+          <div class="psize">11 UK</div>
+          <div class="psize">12 UK</div>
+        </div>
+        <div class="quantity">
+          <p>Quantity :</p>
+          <input type="number" min="1" max="5" value="1">
+        </div> 
+        <div class="btn-box">
+          <button class="cart-btn">Add to Cart</button>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      let bigImg = document.querySelector('.big-img img');
+      function showImg(pic){
+        bigImg.src = pic;
+      }
+    </script>
+  </body>
+</html>
